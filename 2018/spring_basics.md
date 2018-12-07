@@ -45,6 +45,23 @@
   - @Inject：JSR-330 提供的注解。
   - @Resource：JSR-250 提供的注解。
 - 示例见包 highlight_spring4.ch1.di
+  - 使用 @Service 声明当前类是 spring 管理的一个 bean。
+  - 使用 @Autowired 将实体 bean 注入当前某个类。
+  - 用 @Configuration 声明当前类是配置类。
+  - 用 @ComponentScan("包名") 将包下所有声明为 bean 的注册为 bean。
 
+##### java 配置
 
+- @Configuration 声明当前类是配置类。
+- 用 @Bean 注解在方法上，声明当前方法返回一个 Bean。
+- 全局配置使用Java配置（如数据库相关配置、MVC相关配置）。
+- 业务Bean的配置使用注解配置（@Service、@Component、@Repository、@Controller）。
+- 示例见包 highlight_spring4.ch1.javaconfig
 
+##### AOP
+
+- 目的：解耦。
+
+- 此处不理解，待补充。
+
+- 示例见包 highlight_spring4.ch1.aop
