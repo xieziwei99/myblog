@@ -35,10 +35,10 @@
         <option value="$PROJECT_DIR$/src/main/java/highlight_springmvc4/WebInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/highlight_springmvc4/web/HelloController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/views/index.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/highlight_springmvc4/domain/DemoObj.java" />
         <option value="$PROJECT_DIR$/src/main/java/highlight_springmvc4/web/ch4_3/DemoAnnoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/highlight_springmvc4/web/ch4_3/DemoRestController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -65,7 +65,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="993" />
     <option name="y" value="25" />
     <option name="width" value="927" />
@@ -97,65 +97,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="highlight_springmvc4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="highlight_springmvc4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="highlight_springmvc4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="highlight_springmvc4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="highlight_springmvc4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="highlight_springmvc4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="highlight_springmvc4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="highlight_springmvc4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="highlight_springmvc4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="highlight_springmvc4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="highlight_springmvc4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="highlight_springmvc4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="highlight_springmvc4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="highlight_springmvc4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="highlight_springmvc4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546072064666" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546072082510" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -189,12 +138,13 @@
       <workItem from="1545372953843" duration="26000" />
       <workItem from="1545373221980" duration="80000" />
       <workItem from="1545968564732" duration="713000" />
-      <workItem from="1546060088040" duration="9477000" />
+      <workItem from="1546060088040" duration="9977000" />
+      <workItem from="1546328373291" duration="112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14194000" />
+    <option name="totallyTimeSpent" value="14806000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -208,7 +158,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21218836" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19501385" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -281,13 +231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="105" column="21" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/highlight_springmvc4/domain/DemoObj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -345,6 +288,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="109" column="17" lean-forward="true" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="17" />
         </state>
       </provider>
     </entry>
