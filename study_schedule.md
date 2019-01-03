@@ -36,4 +36,5 @@
 #### 1231-0106
 
 - 学习 Java 注解基础，上传笔记 `Java 注解`，代码 `testCode.test_annotation`
+- 学习 log4j，上传笔记 `log4j`，代码 `testCode.test_log4j`
 
