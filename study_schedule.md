@@ -27,5 +27,13 @@
 
 - Spring MVC 的常用注解.md	
 - 学习 servlet ，上传代码 `j2ee`，`j2ee_dynamic`
-- 学习 Java 反射机制，上传笔记 `Java 反射机制`，代码 `test_reflection`
+- 学习 Java 反射机制，上传笔记 `Java 反射机制`，代码 `testCode.test_reflection`
+
+
+
+### 2019年
+
+#### 1231-0106
+
+- 学习 Java 注解基础，上传笔记 `Java 注解`，代码 `testCode.test_annotation`
 
