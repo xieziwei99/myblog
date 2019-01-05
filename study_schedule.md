@@ -39,4 +39,5 @@
 - 学习 log4j，上传笔记 `log4j`，代码 `testCode.test_log4j`
 - 学习 JUnit，上传代码 `testCode.test_junit`
 - 学习 HTML 基础，上传笔记 `HTML`
+- 学习 CSS 基础，HTTP协议，JSP 基础，上传笔记 `CSS`，`HTTP协议`，`JSP`，更新代码 `j2ee_dynamic`
 
