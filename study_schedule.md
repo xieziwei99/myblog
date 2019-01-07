@@ -43,3 +43,7 @@
 - 学习 MVC，上传不完整代码 `mvc` （与 `j2ee_dynamic` 比较观看）
 - 学习 JavaScript 基础，DOM，上传笔记 `JavaScript`，`DOM`
 
+#### 0107-0113
+
+- 学习 JSP，AJAX，JQuery，上传相关笔记，更新代码  `j2ee_dynamic`
+
