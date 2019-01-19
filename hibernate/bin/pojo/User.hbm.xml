@@ -9,7 +9,7 @@
             <generator class="native"></generator>
         </id>
         <property name="name"></property>
-        <set name="products" table="user_product" lazy="false">
+        <set name="products" table="user_product" lazy="true">
             <key column="uid"></key>
             <many-to-many column="pid" class="Product"></many-to-many>
         </set>

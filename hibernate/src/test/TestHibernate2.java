@@ -2,13 +2,13 @@ package test;
 
 import java.util.List;
 
-//import org.hibernate.Criteria;
-import org.hibernate.Query;
-//import org.hibernate.Query;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-//import org.hibernate.criterion.Restrictions;
+import org.hibernate.criterion.Restrictions;
+
+import pojo.Product;
 
 //import pojo.Product;
 
@@ -28,24 +28,26 @@ public class TestHibernate2 {
 //			System.out.println(product);
 //		}
 		
-		// Criteria
-//		Criteria criteria = session.createCriteria(Product.class);
-//		criteria.add(Restrictions.like("name", "%iphone%"));
-//		List<Product> products = criteria.list();
-//		for (Product product : products) {
-//			System.out.println(product);
-//		}
+		// Criteria 分页查询 
+		Criteria criteria = session.createCriteria(Product.class);
+		criteria.add(Restrictions.like("name", "%iphone%"));
+		criteria.setFirstResult(2);		// 从第三条数据开始
+		criteria.setMaxResults(5);		// 查询五条数据
+		List<Product> products = criteria.list();
+		for (Product product : products) {
+			System.out.println(product);
+		}
 		
 		// Standard SQL
-		Query query = session.createSQLQuery
-				("select * from product_ p where p.name like '%iphone%'");
-		List<Object[]> list = query.list();
-		for (Object[] objects : list) {
-			for (Object object : objects) {
-				System.out.print(object + "\t");
-			}
-			System.out.println();
-		}
+//		Query query = session.createSQLQuery
+//				("select * from product_ p where p.name like '%iphone%'");
+//		List<Object[]> list = query.list();
+//		for (Object[] objects : list) {
+//			for (Object object : objects) {
+//				System.out.print(object + "\t");
+//			}
+//			System.out.println();
+//		}
 		
 		session.getTransaction().commit();
 		session.close();

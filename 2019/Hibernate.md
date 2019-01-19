@@ -24,7 +24,118 @@
 ##### 各种概念
 
 - 事务：Hibernate 对数据的各种操作都应该放在事务里面。在事物中的各种操作要么都成功，要么都失败。
-- 
+- 属性延迟加载：用 load 方式获取对象时，只有访问了对象的属性，Hibernate 才会去数据库中查询，否则不访问数据库。
+- 关系延迟加载
+- 级联：通常用在 one-to-many 和 many-to-many，极少用于 many-to-one；
+  - all：所有操作都执行级联操作；
+  - none：都不，（默认是 none）；
+  - delete：删除时；
+  - save-update：保存和更新时。
+- 一级缓存：Hibernate 默认开启一级缓存，一级缓存存放在 session 上。
+- 二级缓存：二级缓存在 SessionFactory 上。
+- 分页查询：使用 Criteria 进行分页查询。
+- 乐观锁：用于处理脏数据。
+- 数据库连接池：如 C3P0连接池（使用时需要 jar 包）
+
+##### Hibernate 注解
+
+- 注解分类：类注解，属性注解，关系注解，其他注解等。
+
+- 类注解：@Entity，表示这是一个实体 bean（即一个持久化 POJO 类）
+
+  ​		@Table(name = "product_")，表示这是一个类，映射到表名 `product-`
+
+- 属性注解：（注解配置在属性对应的 getter 方法上）
+
+  - @Id：表示这是主键
+  - @GeneratedValue(strategy = GenerationType.IDENTITY)：表示自增长方式使用 MySQL 自带的方式
+  - @Column(name = "id") ：表示映射到表的字段 id
+
+- 关系注解：一对多注解，多对一注解，多对多注解。
+
+- ```java
+  package com.how2java.pojo
+  import javax.persistence.Column;
+  import javax.persistence.Entity;
+  import javax.persistence.GeneratedValue;
+  import javax.persistence.GenerationType;
+  import javax.persistence.Id;
+  import javax.persistence.Table;
+   
+  @Entity
+  @Table(name = "product_")
+  public class Product {
+      int id;
+      String name;
+      float price;
+      Category category;
+       
+      @Id
+      @GeneratedValue(strategy = GenerationType.IDENTITY)
+      @Column(name = "id")  
+      public int getId() {
+          return id;
+      }
+      public void setId(int id) {
+          this.id = id;
+      }
+      @Column(name = "name")
+      public String getName() {
+          return name;
+      }
+      public void setName(String name) {
+          this.name = name;
+      }
+      @Column(name = "price")
+      public float getPrice() {
+          return price;
+      }
+      public void setPrice(float price) {
+          this.price = price;
+      }
+      
+      @ManyToOne
+      @JoinColumn(name="cid")
+      public Category getCategory() {
+          return category;
+      }
+      public void setCategory(Category category) {
+          this.category = category;
+      }
+        
+  }
+  /* 
+  	@OneToMany(fetch=FetchType.EAGER)
+      @JoinColumn(name="cid")
+      public Set<Product> getProducts() {
+          return products;
+      }
+      public void setProducts(Set<Product> products) {
+          this.products = products;
+      }
+  */
+  /*
+  	@ManyToMany(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+      @JoinTable(
+              name="user_product",
+              joinColumns=@JoinColumn(name="pid"),
+              inverseJoinColumns=@JoinColumn(name="uid")
+      )    
+      public Set<User> getUsers() {
+          return users;
+      }
+      
+      @ManyToMany(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+      @JoinTable(
+              name="user_product",
+              joinColumns=@JoinColumn(name="uid"),
+              inverseJoinColumns=@JoinColumn(name="pid")
+      )    
+      public Set<Product> getProducts() {
+          return products;
+      }
+  */
+  ```
 
 ##### Product.hbm.xml
 
@@ -69,6 +180,17 @@
             <property name="current_session_context_class">thread</property>
             <property name="show_sql">true</property>	// 是否在控制台显示sql语句
             <property name="hbm2ddl.auto">update</property>	//自动更新数据库表结构
+            
+            <!-- C3P0 -->
+            <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+            <property name="hibernate.c3p0.max_size">20</property>
+            <property name="hibernate.c3p0.min_size">5</property>
+            <property name="hibernate.c3p0.timeout">50000</property>
+            <property name="hibernate.c3p0.max_statements">100</property>
+            <property name="hibernate.c3p0.idle_test_period">3000</property>
+            <property name="hibernate.c3p0.acquire_increment">2</property>
+            <property name="hibernate.c3p0.validate">false</property>
+            
             <mapping resource="pojo/Product.hbm.xml"/>	// 表示hibernate会去识别Product这个实体类
         </session-factory>
     

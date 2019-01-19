@@ -10,7 +10,7 @@
         </id>
         <property name="name"></property>
         
-        <set name="products" lazy="false">
+        <set name="products" cascade="delete" lazy="true">
             <key column="cid" not-null="false"></key>
             <one-to-many class="Product"/>
         </set>
