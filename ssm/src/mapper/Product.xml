@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="mapper.ProductMapper">
+        <insert id="add" parameterType="Product">insert into product_ (name, price, cid, version) values (#{name}, #{price}, #{cid}, #{version})</insert>
+        <delete id="delete" parameterType="Product">delete from product_ where id = #{id}</delete>
+        <update id="update" parameterType="Product">update product_ set name=#{name}, price=#{price}, cid=#{category} where id=#{id}</update>
+        <select id="get" parameterType="_int" resultType="Product">select * from product_ where id=#{id}</select>
+        <select id="list" resultType="Product">select * from product_</select>
+        <resultMap type="Product" id="productBean">
+            <id column="pid" property="id" />
+            <result column="pname" property="name" />
+            <result column="price" property="price" />
+     
+            <!-- 多对一的关系 -->
+            <!-- property: 指的是属性名称, javaType：指的是属性的类型 -->
+            <association property="category" javaType="Category">
+                <id column="cid" property="id"/>
+                <result column="cname" property="name"/>
+            </association>
+        </resultMap>
+    </mapper>
